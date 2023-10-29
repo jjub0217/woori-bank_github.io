@@ -1,0 +1,89 @@
+.header {
+
+  .common-inner {
+    display: flex;
+    align-items: center;
+    // background: #0f0;
+    // 왜 여기다가? header 에다가 하면 왜 안돼지? ===> 질문하기 ===> 부모 를 포함해서 꽉 차게 만들어주는듯?
+    height: 60px;
+
+    .logo {
+
+      // 여기에서도 logo 라는 부모가 아니라 자식한테 background 주는거 보니, 자식한테 주는게 나은듯?
+      a {
+        display: block;
+        background: url("../images/logo.png") no-repeat;
+        width: 122px;
+        height: 31px;
+        background-size: contain;
+      }
+    }
+
+    .auth-area {
+      display: flex;
+      gap: 5px;
+      margin-left: 16px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: 600;
+
+        &.link-login {
+          background: url("../images/gnb_login.png") no-repeat center / cover;
+          width: 80px;
+          height: 30px;
+          color: #fff;
+          padding-right: 13px;
+        }
+
+        &.link-auth {
+          background: url("../images/gnb_auth.png") no-repeat center / cover;
+          width: 97px;
+          height: 30px;
+          padding-right: 15px;
+        }
+      }
+    }
+
+    .gnb {
+      padding-left: 30px;
+
+      .nav-list {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-item {
+        .nav {
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+    .util-area {
+      // w 980px 안에서만 margin-left 가 쫘악 된다.
+
+      margin-left: auto;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+      gap: 14px;
+
+      .btn-search {
+        width: 25px;
+        height: 25px;
+        background: url("../images/i_search.png") no-repeat center / cover;
+      }
+    }
+
+  }
+
+}

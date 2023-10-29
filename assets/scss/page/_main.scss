@@ -1,0 +1,643 @@
+.container .headline {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+
+.main-visual {
+  .swiper {
+    height: 520px;
+
+    &-slide {
+
+      a {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+
+        img {
+          width: 980px;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .slide1 {
+      background: #bfd9f7;
+    }
+
+    .slide2 {
+      background: #e6f1f4;
+    }
+
+    .slide3 {
+      background: #edf3fd;
+    }
+
+    .slide4 {
+      background: #edf3fd;
+    }
+
+    // swiper　안에다가 한 이유 : 선택자 점수 높이려고
+    .control-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      bottom: 60px;
+      width: 100%;
+      z-index: 1;
+
+      .pagination {
+        display: flex;
+        // swiper 의 pagination 기본값으로 width 값이 100% 로 잡여있기 때문에 해당 요소의 길이만큼만 width 값을 잡아주자
+        width: auto;
+        gap: 4px;
+        margin-right: 35px;
+
+        .swiper-pagination-bullet {
+          width: 8px;
+          height: 8px;
+          background: #777;
+          opacity: 1;
+        }
+
+        .swiper-pagination-bullet-active {
+          background: #000;
+        }
+      }
+
+      .btn-autoplay {
+        background: url("../images/i_btn_autoplay_play.png") no-repeat center;
+        // background: url("../images/i_btn_autoplay_pause.png") no-repeat center / 10px;
+        width: 11px;
+        height: 14px;
+        padding: 0 20px;
+        cursor: pointer;
+      }
+
+      .btn-prev {
+        background: url("../images/i_btn_prev.png") no-repeat center / 10px;
+        width: 14px;
+        height: 20px;
+        opacity: 0.4;
+        padding: 0 13px;
+        cursor: pointer;
+      }
+
+      .btn-next {
+        background: url("../images/i_btn_next.png") no-repeat center / 10px;
+        width: 14px;
+        height: 20px;
+        opacity: 0.4;
+        padding: 0 13px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.main-quick {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -38px);
+  z-index: 2;
+  width: 772px;
+
+  .group-menu {
+    display: flex;
+    color: #fff;
+    background: #3a8dfd;
+    border-radius: 60px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px #808080;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 76px;
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26px;
+    }
+
+    .item-other {
+      flex: 0 0 170px;
+      background: #0082cd;
+
+      a {
+        font-size: 20px;
+      }
+    }
+
+    .item-menu {
+      flex: 1;
+      position: relative;
+
+      &+.item-menu a::before {
+        content: "";
+        width: 1px;
+        height: 15px;
+        position: absolute;
+        left: 0;
+        background: #fff;
+      }
+    }
+
+    .item-quick {
+      background: #fff;
+      color: #000;
+      flex: 0 0 175px;
+
+      & a::after {
+        content: "";
+        display: block;
+        background: url("../images/btn_quick.png") no-repeat;
+        width: 12px;
+        height: 22px;
+        margin-left: 20px;
+      }
+    }
+
+  }
+}
+
+.group-sub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // background: #f0f0f0;
+  height: 80px;
+
+  li {
+    padding: 0 20px;
+  }
+
+  a {
+    color: #7f7e7e;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.inner1 {
+  padding-top: 130px;
+  display: flex;
+  justify-content: space-between;
+
+  .headline {
+    margin-bottom: 32px;
+  }
+
+  .main-finance {
+    // 이게 뭔지 영상에 나오는지 보기 ===> 질문하기(검색용)
+    flex: 0 0 696px;
+    position: relative;
+
+
+    .finance-list {
+      display: flex;
+
+      li {
+        flex: 1;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+          letter-spacing: -1px;
+          height: 93px;
+
+          &::before {
+            content: "";
+            width: 54px;
+            height: 44px;
+          }
+        }
+
+        &.deposit {
+          a::before {
+            background: url("../images/i_deposit.png") no-repeat center;
+          }
+
+          &:hover {
+            background-color: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_deposit_over.png") no-repeat center;
+            }
+          }
+        }
+
+        &.loan {
+          a::before {
+            background: url("../images/i_loan.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_loan_over.png") no-repeat center;
+            }
+          }
+
+        }
+
+        &.fund {
+          a::before {
+            background: url("../images/i_fund.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_fund_over.png") no-repeat center;
+            }
+          }
+        }
+
+        &.forex {
+
+          a::before {
+            background: url("../images/i_forex.png") no-repeat center;
+
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_forex_over.png") no-repeat center;
+
+            }
+          }
+        }
+
+
+        &.trust {
+
+          a::before {
+            background: url("../images/i_trust.png") no-repeat center;
+
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_trust_over.png") no-repeat center;
+            }
+          }
+        }
+
+        &.retirement_pension {
+          a::before {
+            background: url("../images/i_retirement_pension.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_retirement_pension_over.png") no-repeat center;
+
+            }
+          }
+        }
+
+
+        &.insurance {
+
+          a::before {
+            background: url("../images/i_insurance.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_insurance_over.png") no-repeat center;
+            }
+          }
+        }
+
+        &.ISA {
+
+          a::before {
+            background: url("../images/i_ISA.png") no-repeat center;
+
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_ISA_over.png") no-repeat center;
+
+            }
+          }
+        }
+
+        &.ISA::after {
+          content: "";
+          position: absolute;
+          top: 50px;
+          right: -10px;
+          width: 2px;
+          height: 88px;
+          background: #e9f2ff;
+        }
+      }
+
+    }
+  }
+
+  .main-card {
+    flex: 0 0 260px;
+
+    .card-list {
+      display: flex;
+
+      li {
+        flex: 1;
+
+        a {
+          display: flex;
+          flex-direction: column;
+          gap: 7px;
+          justify-content: center;
+          align-items: center;
+          font-size: 15px;
+          letter-spacing: -1px;
+          height: 93px;
+
+          &::before {
+            content: "";
+            width: 54px;
+            height: 44px;
+          }
+        }
+
+        &.card_application {
+          a::before {
+            background: url("../images/i_card_application.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_card_application_over.png") no-repeat center;
+
+            }
+          }
+
+        }
+
+
+        &.my_card {
+          a::before {
+            background: url("../images/i_my_card.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_my_card_over.png") no-repeat center;
+
+            }
+          }
+
+        }
+
+        &.event {
+          a::before {
+            background: url("../images/i_event.png") no-repeat center;
+          }
+
+          &:hover {
+            background: #3A8DFD;
+            border-radius: 50%;
+            color: #fff;
+
+            a::before {
+              background: url("../images/i_event_over.png") no-repeat center;
+
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+}
+
+.main-service {
+
+  .headline {
+    margin-top: 28px;
+  }
+
+  .service-list {
+    padding: 25px 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
+    .service-item {
+      flex: 1;
+
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #d8d8d8;
+      }
+
+      .image-box {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+          margin-top: 15px;
+          font-size: 19px;
+          color: #555;
+          font-weight: 500;
+        }
+
+        .desc {
+          font-size: 14px;
+          color: #666;
+          text-align: center;
+          line-height: 1.5;
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.inner2 {
+  height: 180px;
+  margin-bottom: 50px;
+  padding: 45px 0;
+  box-sizing: border-box;
+  background: #f4f7fa;
+
+  .common-inner {
+    width: 980px;
+    display: flex;
+    gap: 45px;
+
+
+    .headline-sm {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+
+
+  .main-news {
+    flex: 1;
+
+    display: flex;
+    gap: 30px;
+
+    position: relative;
+
+    li a {
+      display: flex;
+      align-items: flex-start;
+      gap: 65px;
+      height: 30px;
+    }
+
+    .text {
+      display: block;
+      font-size: 14px;
+      max-width: 250px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .date {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .link-more {
+      position: absolute;
+      top: 35px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      color: #666;
+
+
+      &::after {
+        content: "";
+        background: url("../images/i_link_more.png") no-repeat center / contain;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+
+
+
+  .main-event {
+    flex: 1;
+
+    display: flex;
+    gap: 30px;
+
+    position: relative;
+
+    li a {
+      display: flex;
+      align-items: flex-start;
+      height: 30px;
+    }
+
+
+    .link-more {
+      position: absolute;
+      top: 35px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      color: #666;
+
+      &::after {
+        content: "";
+        background: url("../images/i_link_more.png") no-repeat center / contain;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+      }
+    }
+
+
+
+    .event-item a {
+      flex: 1;
+
+      .text {
+        display: block;
+        font-size: 14px;
+        max-width: 350px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+    }
+  }
+
+
+}
