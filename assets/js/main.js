@@ -2,7 +2,6 @@
 $(function () {
 
     new Swiper('.main-visual .swiper',{
-
     navigation: {
       nextEl: ".btn-next",
       prevEl: ".btn-prev"
@@ -11,9 +10,6 @@ $(function () {
       el: ".pagination",
       clickable: true
     },
-//       autoplay: {
-//       el: ".btn-autoplay ",
-//       delay: 10000,
-//  },
+
   })
 })
