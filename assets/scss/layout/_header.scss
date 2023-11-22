@@ -1,15 +1,11 @@
 .header {
 
-  .common-inner {
+  .inner {
     display: flex;
     align-items: center;
-    // background: #0f0;
-    // 왜 여기다가? header 에다가 하면 왜 안돼지? ===> 질문하기 ===> 부모 를 포함해서 꽉 차게 만들어주는듯?
     height: 60px;
 
     .logo {
-
-      // 여기에서도 logo 라는 부모가 아니라 자식한테 background 주는거 보니, 자식한테 주는게 나은듯?
       a {
         display: block;
         background: url("../images/logo.png") no-repeat;
@@ -24,15 +20,57 @@
       gap: 5px;
       margin-left: 16px;
 
-      a {
+      li {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        position: relative;
         box-sizing: border-box;
-        overflow: hidden;
         border-radius: 5px;
         font-size: 14px;
         font-weight: 600;
+
+        .sub-list {
+          display: none;
+
+          &.on {
+            display: flex;
+            justify-content: space-between;
+            width: 112px;
+            position: absolute;
+            top: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            height: fit-content;
+            border: 1px solid #ccc;
+            border-radius: 7px;
+            background: #fff;
+            box-shadow: 2px 2px 5px -4px rgba(0, 0, 0, 0.6);
+          }
+
+          .bar {
+            position: relative;
+
+            &::after {
+              content: "";
+              width: 1px;
+              height: 17px;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              background: #ccc;
+            }
+          }
+
+          .sub-item {
+            padding: 11px 15px;
+            color: #0082cd;
+            font-weight: 500;
+            font-size: 13px;
+          }
+        }
 
         &.link-login {
           background: url("../images/gnb_login.png") no-repeat center / cover;
@@ -47,6 +85,13 @@
           width: 97px;
           height: 30px;
           padding-right: 15px;
+
+          .sub-item {
+            padding: 11px 15px;
+            color: #626161;
+            font-weight: 500;
+            font-size: 13px;
+          }
         }
       }
     }
@@ -54,28 +99,200 @@
     .gnb {
       padding-left: 30px;
 
-      .nav-list {
-        display: flex;
-        gap: 20px;
-      }
+      .nav {
+        &-list {
+          display: flex;
+          gap: 20px;
+        }
 
-      .nav-item {
-        .nav {
-          font-size: 15px;
-          font-weight: bold;
+        &-item {
+          position: relative;
+
+          &_title {
+            font-size: 15px;
+            font-weight: bold;
+          }
+
+          .triangle {
+            display: none;
+
+            &.on {
+              display: block;
+              position: absolute;
+              top: 140%;
+              left: 35%;
+              z-index: 3;
+            }
+          }
+
+          .sub-list {
+            display: none;
+
+            &.on {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+              top: 180%;
+              left: 50%;
+              transform: translateX(-37%);
+              height: fit-content;
+              width: 140px;
+              background: #fff;
+              border: 1px solid #666;
+              z-index: 2;
+              padding: 15px 20px;
+              box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.6);
+            }
+
+            .sub-item {
+              padding-top: 10px;
+              font-size: 12px;
+              color: #666;
+              font-weight: bold;
+
+              &:nth-child(1) {
+                font-size: 16px;
+                font-weight: bold;
+                border-bottom: 2px solid #666;
+                padding-bottom: 10px;
+                padding-top: 0;
+                color: #000;
+
+                &+.sub-item {
+                  padding-top: 15px;
+                }
+              }
+
+            }
+          }
         }
       }
-
     }
 
-    .util-area {
-      // w 980px 안에서만 margin-left 가 쫘악 된다.
-
+    .util-list {
+      display: flex;
+      gap: 14px;
       margin-left: auto;
       font-size: 15px;
       font-weight: bold;
-      display: flex;
-      gap: 14px;
+
+      .util-item {
+        position: relative;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          height: 100%;
+        }
+
+        .triangle {
+          display: none;
+
+          &.on {
+            display: block;
+            position: absolute;
+            top: 101%;
+            left: 60%;
+            z-index: 3;
+          }
+        }
+
+        .sub-list {
+          display: none;
+
+          &.on {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 130%;
+            left: 50%;
+            transform: translateX(-37%);
+            height: fit-content;
+            width: 230px;
+            background: #fff;
+            border: 1px solid #666;
+            z-index: 2;
+            padding: 15px 20px;
+            box-shadow: 2px 2px 5px -2px rgba(0, 0, 0, 0.6);
+          }
+
+          .sub-item {
+            padding-top: 10px;
+            font-size: 12px;
+            color: #666;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            &:nth-child(1) {
+              font-size: 16px;
+              font-weight: bold;
+              border-bottom: 2px solid #666;
+              padding-bottom: 10px;
+              padding-top: 0;
+              color: #000;
+              align-items: flex-start;
+
+              &+.sub-item {
+                padding-top: 15px;
+              }
+            }
+
+            &:not(&:nth-child(1))::before {
+              content: "";
+              display: block;
+              width: 20px;
+              height: 16px;
+            }
+
+            &.English {
+              &::before {
+                background: url("../images/flag_us.gif") no-repeat;
+                background-size: cover;
+              }
+            }
+
+            &.Chinese {
+              &::before {
+                background: url("../images/flag_china.gif") no-repeat;
+                background-size: cover;
+              }
+            }
+
+            &.Japanese {
+              &::before {
+                background: url("../images/flag_japan.gif") no-repeat;
+                background-size: cover;
+              }
+            }
+
+            &.Filipino {
+              &::before {
+                background: url("../images/flag_philippines.gif") no-repeat;
+                background-size: cover;
+              }
+            }
+
+            &.Vietnamese {
+              &::before {
+                background: url("../images/flag_vietnam.gif") no-repeat;
+                background-size: cover;
+              }
+            }
+
+            &.Mongolian {
+              &::before {
+                background: url("../images/flag_mongolia.gif") no-repeat;
+                background-size: cover;
+              }
+            }
+
+          }
+        }
+
+      }
 
       .btn-search {
         width: 25px;
@@ -83,7 +300,5 @@
         background: url("../images/i_search.png") no-repeat center / cover;
       }
     }
-
   }
-
 }

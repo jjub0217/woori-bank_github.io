@@ -23,43 +23,268 @@
 
 <body>
 
-  <!-- 처음 화면에서 tab 을 하면 #skip-header 영역이 보이고, 엔터를 친 후에 tab 을 누르면 바로 main 쪽으로 넘어간다.: 이렇게 하려면 main 쪽에 id가 #skip-header 의 a 링크의 주소와 일치해야 한다. (웹접근성: header 를 읽고싶지 않을수도 있으니까)-->
   <div id="skip-header">
     <a href="#main">본문내용</a>
   </div>
-  <!-- 최소 너비 보장해주는 wrapper -->
   <div class="wrapper">
     <header class="header">
-      <div class="common-inner">
+      <div class="inner">
         <h1 class="logo">
           <a href="">
             <span class="blind">우리은행 로고</span>
           </a>
         </h1>
-        <div class="auth-area">
-          <a href="" class="link-login">로그인</a>
-          <a href="" class="link-auth">인증센터</a>
-        </div>
+
+        <ul class="auth-area">
+          <li href="" class="link-login">
+            <a href="">
+              로그인
+            </a>
+            <ul class="sub-list">
+              <li class="sub-item">개인</li>
+              <i class="bar"></i>
+              <li class="sub-item">기업</li>
+            </ul>
+          </li>
+          <li href="" class="link-auth">
+            <a href="">인증센터</a>
+            <ul class="sub-list">
+              <li class="sub-item">개인</li>
+              <i class="bar"></i>
+              <li class="sub-item">기업</li>
+            </ul>
+          </li>
+        </ul>
+
         <nav class="gnb">
           <ul class="nav-list">
-            <li class="nav-item"><a href="#" class="nav">개인</a></li>
-            <li class="nav-item"><a href="#" class="nav">기업</a></li>
-            <li class="nav-item"><a href="#" class="nav">마이데이터</a></li>
-            <li class="nav-item"><a href="#" class="nav">자산관리</a></li>
-            <li class="nav-item"><a href="#" class="nav">금융상품</a></li>
-            <li class="nav-item"><a href="#" class="nav">카드</a></li>
-            <li class="nav-item"><a href="#" class="nav">제휴제안</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>개인</span></a>
+              <div class="triangle">
+                <img src="./assets/images/arrow.png" alt="">
+              </div>
+              <ul class="sub-list">
+                <li class="sub-item">
+                  <a href="">개인뱅킹</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">조회</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">이체</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">오픈뱅킹</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">공과금</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">예금/신탁</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">펀드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">보험</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">대출</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">외환/골드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">퇴직연금</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">뱅킹관리</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">ISA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>기업</span></a>
+              <div class="triangle">
+                <img src="./assets/images/arrow.png" alt="">
+              </div>
+              <ul class="sub-list">
+                <li class="sub-item">
+                  <a href="">기업뱅킹</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">조회</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">이체</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">오픈뱅킹</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">공과금</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">예금/신탁</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">펀드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">보험</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">대출</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">외환/골드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">퇴직연금</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">뱅킹관리</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">ISA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>마이데이터</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>자산관리</span></a>
+              <div class="triangle">
+                <img src="./assets/images/arrow.png" alt="">
+              </div>
+              <ul class="sub-list">
+                <li class="sub-item">
+                  <a href="">자산관리</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">MY자산 진단</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">펀드 포트폴리오</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">퇴직연금 포트폴리오</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">WON챌린지</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">미래설계</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>금융상품</span></a>
+              <div class="triangle">
+                <img src="./assets/images/arrow.png" alt="">
+              </div>
+              <ul class="sub-list">
+                <li class="sub-item">
+                  <a href="">금융상품</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">추천상품</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">예금</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">펀드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">대출</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">외환</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">골드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">신탁</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">보험</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">퇴직연금</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">ISA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>카드</span></a>
+              <div class="triangle">
+                <img src="./assets/images/arrow.png" alt="">
+              </div>
+              <ul class="sub-list">
+                <li class="sub-item">
+                  <a href="">카드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">우리카드</a>
+                </li>
+                <li class="sub-item">
+                  <a href="">롯데카드</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-item_title"><span>제휴제안</span></a>
+            </li>
           </ul>
         </nav>
-        <div class="util-area">
-          <button class="btn btn-menu">전체메뉴</button>
-          <button class="btn btn-lang">GLOBAL</button>
-          <button aria-label="검색" class="btn btn-search"></button>
-        </div>
+
+        <ul class="util-list">
+          <li class="util-item"><a href="">전체메뉴</a></li>
+          <li class="util-item">
+            <a href="" class="util-item_title"><span>GLOBAL</span></a>
+            <div class="triangle">
+              <img src="./assets/images/arrow.png" alt="">
+            </div>
+            <ul class="sub-list">
+              <li class="sub-item">
+                <a href="">LANGUAGE</a>
+              </li>
+              <li class="sub-item English">
+                <a href="">English</a>
+              </li>
+              <li class="sub-item Chinese">
+                <a href="">Chinese(中國語)
+                </a>
+              </li>
+              <li class="sub-item Japanese">
+                <a href="">Japanese(日本語)</a>
+              </li>
+              <li class="sub-item Filipino">
+                <a href="">Filipino(Tagalog)</a>
+              </li>
+              <li class="sub-item Vietnamese">
+                <a href="">Vietnamese(tiếng Việt)</a>
+              </li>
+              <li class="sub-item Mongolian">
+                <a href="">Mongolian(Монгол хэл)</a>
+              </li>
+            </ul>
+          </li>
+          <li aria-label="검색" class="util-item btn-search"></li>
+        </ul>
+
       </div>
     </header>
+
     <main class="container" id="main">
-      <section class="main-visual">
+      <section class="section-visual">
         <h2 class="blind">우리은행 소개</h2>
         <div class="swiper">
           <ul class="swiper-wrapper">
@@ -93,92 +318,88 @@
           </div>
         </div>
       </section>
-      <section class="main-quick">
-        <h2 class="blind">바로가기 메뉴</h2>
-        <ul class="group-menu">
-          <li class="item-other">
-            <a href="#" class="link-other">다른금융<br> 정보조회
-            </a>
-          </li>
-          <li class="item-menu">
-            <a href="#" class="link-menu">조회</a>
-          </li>
-          <li class="item-menu">
-            <a href="#" class="link-menu">이체</a>
-          </li>
-          <li class="item-menu">
-            <a href="#" class="link-menu">환율</a>
-          </li>
-          <li class="item-quick">
-            <a href="#" class="link-quick">빠른메뉴</a>
-          </li>
-        </ul>
-        <ul class="group-sub">
-          <li>
-            <a href="#">금융 소비자 보호</a>
-          </li>
-          <li><a href="#">보안뉴스</a></li>
-          <li><a href="#">상품/약관 공시</a></li>
-        </ul>
-      </section>
-      <div class="common-inner">
-        <div class="inner1">
-          <section class="main-finance">
+      <div class="inner">
+        <section class="section-quick">
+          <h2 class="blind">바로가기 메뉴</h2>
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a href="" class="link-other">다른금융<br> 정보조회
+              </a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="link-menu">조회</a>
+            </li>
+            <i class="bar"></i>
+            <li class="menu-item">
+              <a href="" class="link-menu">이체</a>
+            </li>
+            <i class="bar"></i>
+            <li class="menu-item">
+              <a href="" class="link-menu">환율</a>
+            </li>
+            <li class="menu-item">
+              <a href="" class="link-quick">빠른메뉴</a>
+            </li>
+          </ul>
+          <ul class="sub-list">
+            <li class="sub-item">
+              <a href="">금융 소비자 보호</a>
+            </li>
+            <li class="sub-item">
+              <a href="">보안뉴스</a>
+            </li>
+            <li class="sub-item">
+              <a href="">상품/약관 공시</a>
+            </li>
+          </ul>
+        </section>
+        <div class="flex-box">
+          <section class="section-finance">
             <h2 class="headline">금융상품</h2>
             <ul class="finance-list">
               <li class="fianance-item deposit">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_deposit.png" alt=""> -->
                   예금
                 </a>
               </li>
               <li class="fianance-item loan">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_loan.png" alt=""> -->
                   대출
                 </a>
               </li>
               <li class="fianance-item fund">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_fund.png" alt=""> -->
                   펀드
                 </a>
               </li>
               <li class="fianance-item forex">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_forex.png" alt=""> -->
                   외환
                 </a>
               </li>
               <li class="fianance-item trust">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_trust.png" alt=""> -->
                   신탁
                 </a>
               </li>
               <li class="fianance-item retirement_pension">
                 <a href="">
-                  <!-- 여기 위치에 이미지가 들어가야 한다. -->
-                  <!-- <img src="./assets/images/우리은행/i_retirement_pension.png" 
-                    alt="">-->
                   퇴직연금
                 </a>
               </li>
               <li class="fianance-item insurance">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_insurance.png" alt=""> -->
                   보험
                 </a>
               </li>
               <li class="fianance-item ISA">
                 <a href="">
-                  <!-- <img src="./assets/images/우리은행/i_ISA.png" alt=""> -->
                   ISA
                 </a>
               </li>
             </ul>
           </section>
-          <section class="main-card">
+          <section class="section-card">
             <h2 class="headline">카드</h2>
             <ul class="card-list">
               <li class="card-item card_application">
@@ -193,7 +414,7 @@
             </ul>
           </section>
         </div>
-        <section class="main-service">
+        <section class="section-service">
           <h2 class="headline">서비스</h2>
           <ul class="service-list">
             <li class="service-item">
@@ -202,7 +423,7 @@
                   <img src="./assets/images/service1.png" alt="">
                 </div>
                 <div class="text-box">
-                  <h3 class="title">우리WON뱅킹</h3>
+                  <strong class="title">우리WON뱅킹</strong>
                   <p class="desc">새 시대의 금융을 켜다,<br>
                     우리은행 대표 모바일뱅킹 APP
                   </p>
@@ -215,7 +436,7 @@
                   <img src="./assets/images/service2.png" alt="">
                 </div>
                 <div class="text-box">
-                  <h3 class="title">마이데이터</h3>
+                  <strong class="title">마이데이터</strong>
                   <p class="desc">나의 데이터가 가치가 되는<br>새로운 경험을 체험해 보세요</p>
                 </div>
               </a>
@@ -226,7 +447,7 @@
                   <img src="./assets/images/service3.png" alt="">
                 </div>
                 <div class="text-box">
-                  <h3 class="title">스마트간편신규</h3>
+                  <strong class="title">스마트간편신규</strong>
                   <p class="desc">직원에게 추천받으신 상품을<br>간편하게 가입하세요</p>
                 </div>
               </a>
@@ -234,50 +455,64 @@
           </ul>
         </section>
       </div>
-      <div class="inner2">
-        <div class="common-inner">
-          <section class="main-news">
+      <div class="box">
+        <div class="inner">
+          <section class="section-news">
             <h2 class="headline-sm">새소식</h2>
             <ul class="news-list">
               <li class="news-item">
                 <a href="">
-                  <span class="text">
-                    [채용] 2023년 상반기 우리은행 신입행원2023년 상반기 우리은행 신입행원2023년 상반기 우리은행 신입행원</span>
+                  <p class="content">
+                    <span class="cate">[채용]</span>
+                    <span class="text">2023년 상반기 우리은행 신입행원 2023년 상반기 우리은행 신입행원2023년 상반기 우리은행 신입행원</span>
+                  </p>
                   <span class="date">2023.06.08</span>
                 </a>
               </li>
               <li class="news-item">
                 <a href="">
-                  <span class="text">[공지] 모바일 · 인터넷뱅킹 타행이체 수수 [공지] 모바일 · 인터넷뱅킹 타행이체 수수[공지] 모바일 · 인터넷뱅킹 타행이체 수수</span>
+                  <p class="content">
+                    <span class="cate">[공지]</span>
+                    <span class="text">
+                      모바일 · 인터넷뱅킹 타행이체 수수 모바일 · 인터넷뱅킹 타행이체 수수[공지] 모바일
+                      · 인터넷뱅킹 타행이체 수수
+                    </span>
+                  </p>
                   <span class="date">2023.02.08</span>
                 </a>
               </li>
               <li class="news-item">
                 <a href="">
-                  <span class="text">[공지] SC제일은행과의 금융거래 일시중단[공지] SC제일은행과의 금융거래 일시중단[공지] SC제일은행과의 금융거래 일시중단 </span>
+                  <p class="content">
+                    <span class="cate">[공지]</span>
+                    <span class="text">
+                      SC제일은행과의 금융거래 일시중단 SC제일은행과의 금융거래 일시중단[공지]
+                      SC제일은행과의 금융거래 일시중단
+                    </span>
+                  </p>
                   <span class="date">2023.06.01</span>
                 </a>
               </li>
             </ul>
             <a href="" class="link-more">더보기</a>
           </section>
-          <section class="main-event">
+          <section class="section-event">
             <h2 class="headline-sm">이벤트</h2>
             <ul class="event-list">
               <li class="event-item">
                 <a href="">
-                  <span class="text">
+                  <span class="content">
                     IRP 입금미션 하고 푸짐한 선물 받자!IRP 입금미션 하고 푸짐한 선물 받자!IRP 입금미션 하고 푸짐한 선물 받자!</span>
                 </a>
               </li>
               <li class="event-item">
                 <a href="">
-                  <span class="text">우리은행 첫 적금 만들고 1만원 받으세요!우리은행 첫 적금 만들고 1만원 받으세요!우리은행 첫 적금 만들고 1만원 받으세요!</span>
+                  <span class="content">우리은행 첫 적금 만들고 1만원 받으세요!우리은행 첫 적금 만들고 1만원 받으세요!우리은행 첫 적금 만들고 1만원 받으세요!</span>
                 </a>
               </li>
               <li class="event-item">
                 <a href="">
-                  <span class="text">직장인을 위한 특별한 혜택! 우리 직장인셀럽직장인을 위한 특별한 혜택! 우리 직장인셀럽직장인을 위한 특별한 혜택! 우리 직장인셀럽 </span>
+                  <span class="content">직장인을 위한 특별한 혜택! 우리 직장인셀럽직장인을 위한 특별한 혜택! 우리 직장인셀럽직장인을 위한 특별한 혜택! 우리 직장인셀럽 </span>
                 </a>
               </li>
             </ul>
@@ -287,19 +522,11 @@
       </div>
 
 
-
-
     </main>
     <footer class="footer">
-      <!-- 푸터의 로고는 h2 로 하는게 맞긴한데, 지금 레이아웃보면 h2 가 먼저 나와있는게 아니기 때문에 제일먼저 h2 의 blind 로 해주고, 정작 로고는 아무의미 없는 영역으로 레이아웃을 채워주는게 맞는것인가? ====> 질문하기 -->
       <h2 class="blind">우리은행 푸터</h2>
       <div class="group-link">
-        <div class="common-inner">
-
-          <!-- 버튼이 큰데, 그 옆에 화살표가 나와야하는데, 버튼안의 텍스트를
-                  span 으로 감싸주면 컨트롤이 좀 더 쉬워진다. 
-                  왜냐? 기준을 잡을때 텍스트한테 바로 잡을수 있다. 
-                버튼이 컸어야 했다면 기준이 너무 크다. span 은 자기만큼만 있기 때문에 거기에 기준을 잡게하려면...   -===> 이해 안되니까 이해 시켜달라고 하기. -->
+        <div class="inner">
           <ul class="direct-list">
             <li class="direct-item tel"><a href="#">대표 1588-5000</a></li>
             <li class="direct-item"><a href="#">기타서비스</a></li>
@@ -315,43 +542,49 @@
           </ul>
         </div>
       </div>
-      <div class="common-inner">
+      <div class="inner">
         <div class="group-info">
-          <div class="logo-area">
+          <div class="footer-logo">
             <a href="">
+              <span class="blind">푸터 로고</span>
             </a>
           </div>
           <div class="info-area">
-            <ul class="info1-list">
-              <li class="info1-item"><a href="#">은행소개</a></li>
-              <li class="info1-item"><a href="#">영업점안내</a></li>
-              <li class="info1-item"><a href="#">고객광장</a></li>
-              <li class="info1-item bold"><a href="#">개인정보처리방침</a></li>
-              <li class="info1-item bold"><a href="#">신용정보활용체제</a></li>
+            <ul class="info-list">
+              <li class="info-item"><a href="#">은행소개</a></li>
+              <li class="info-item"><a href="#">영업점안내</a></li>
+              <li class="info-item"><a href="#">고객광장</a></li>
+              <li class="info-item bold"><a href="#">개인정보처리방침</a></li>
+              <li class="info-item bold"><a href="#">신용정보활용체제</a></li>
               <li class="info1-item"><a href="#">개인신용정보관리보호</a></li>
             </ul>
-            <ul class="info2-list">
-              <li class="info2-item"><a href="#">사고신고</a></li>
-              <li class="info2-item"><a href="#">전자민원접수</a></li>
-              <li class="info2-item"><a href="#">보호금융상품등록부</a></li>
-              <li class="info2-item"><a href="#">상품공시실</a></li>
-              <li class="info2-item"><a href="#">보안센터</a></li>
-              <li class="info2-item"><a href="#">웹접근성 이용안내</a></li>
+            <ul class="info-list">
+              <li class="info-item"><a href="#">사고신고</a></li>
+              <li class="info-item"><a href="#">전자민원접수</a></li>
+              <li class="info-item"><a href="#">보호금융상품등록부</a></li>
+              <li class="info-item"><a href="#">상품공시실</a></li>
+              <li class="info-item"><a href="#">보안센터</a></li>
+              <li class="info-item"><a href="#">웹접근성 이용안내</a></li>
             </ul>
             <small>COPYRIGHTS WOORI BANK. ALL RIGHTS RESERVED.</small>
           </div>
           <div class="mark-area">
             <ul class="makr-list">
-              <!-- img 태그를 여기서 과연 써야 하는것인가? background 로 하면 안되는 것인가? ===> 질문하기 -->
-              <li class="mark-item mark1"><a href="">
+              <li class="mark-item mark1">
+                <a href="">
                   <span class="blind">(사)한국장애인단체총연합회 한국웹접근성인증평가원 웹 접근성 우수사이트 인증마크(WA인증마크)</span>
-                </a></li>
-              <li class="mark-item mark2"><a href="">
+                </a>
+              </li>
+              <li class="mark-item mark2">
+                <a href="">
                   <span class="blind">2019 고객감동경영대상 종합대상 12년 연속 수상</span>
-                </a></li>
-              <li class="mark-item mark3"><a href="">
+                </a>
+              </li>
+              <li class="mark-item mark3">
+                <a href="">
                   <span class="blind">The Banker Awards 2020 우리은행 3관왕 수상</span>
-                </a></li>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
