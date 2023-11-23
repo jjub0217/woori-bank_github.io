@@ -6,6 +6,7 @@ $(function () {
    * 
    */
   const mainVisual = new Swiper('.section-visual .swiper',{
+  effect: "fade",
   autoplay:{
     delay: 5000,
   },
