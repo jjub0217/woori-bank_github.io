@@ -47,4 +47,10 @@ $(function () {
   $(this).find('.sub-list').removeClass('on');
   $(this).find(".triangle").removeClass("on")
   })
+
+  $(".group-link .direct-item").hover(function(){
+    $(this).find(".sub-area").addClass("on")
+  },function(){
+    $(this).find(".sub-area").removeClass("on")
+  })
 })

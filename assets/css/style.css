@@ -411,27 +411,27 @@ button {
   height: 16px;
 }
 .header .inner .util-list .util-item .sub-list .sub-item.English::before {
-  background: url("../images/flag_us.gif") no-repeat;
+  background: url("../images/all_svc_flag_us.gif") no-repeat;
   background-size: cover;
 }
 .header .inner .util-list .util-item .sub-list .sub-item.Chinese::before {
-  background: url("../images/flag_china.gif") no-repeat;
+  background: url("../images/all_svc_flag_china.gif") no-repeat;
   background-size: cover;
 }
 .header .inner .util-list .util-item .sub-list .sub-item.Japanese::before {
-  background: url("../images/flag_japan.gif") no-repeat;
+  background: url("../images/all_svc_flag_japan.gif") no-repeat;
   background-size: cover;
 }
 .header .inner .util-list .util-item .sub-list .sub-item.Filipino::before {
-  background: url("../images/flag_philippines.gif") no-repeat;
+  background: url("../images/all_svc_flag_philippines.gif") no-repeat;
   background-size: cover;
 }
 .header .inner .util-list .util-item .sub-list .sub-item.Vietnamese::before {
-  background: url("../images/flag_vietnam.gif") no-repeat;
+  background: url("../images/all_svc_flag_vietnam.gif") no-repeat;
   background-size: cover;
 }
 .header .inner .util-list .util-item .sub-list .sub-item.Mongolian::before {
-  background: url("../images/flag_mongolia.gif") no-repeat;
+  background: url("../images/all_svc_flag_mongolia.gif") no-repeat;
   background-size: cover;
 }
 .header .inner .util-list .btn-search {
@@ -458,17 +458,17 @@ button {
   align-items: center;
   padding: 9px 0;
 }
-.footer .group-link .direct-list li:not(.site) a {
+.footer .group-link .direct-list .direct-item:not(.site) .direct-item_title {
   border-right: 1px solid #ddd;
 }
 .footer .group-link .direct-item {
   position: relative;
 }
-.footer .group-link .direct-item a {
+.footer .group-link .direct-item_title {
   font-size: 12px;
-  padding: 0 40px;
+  padding: 0 50px;
 }
-.footer .group-link .direct-item a::after {
+.footer .group-link .direct-item_title::after {
   content: "";
   display: inline-block;
   background: url("../images/i_footer_more.png") no-repeat center;
@@ -476,7 +476,152 @@ button {
   height: 11px;
   padding: 0 5px;
 }
-.footer .group-link .direct-item.tel {
+.footer .group-link .direct-item .sub-area {
+  display: none;
+}
+.footer .group-link .direct-item .sub-area.on {
+  display: block;
+  position: absolute;
+  bottom: 130%;
+  background: #fff;
+  border: 1px solid;
+}
+.footer .group-link .direct-item .sub-area.on .triangle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  bottom: -2.5%;
+}
+.footer .group-link .direct-item .sub-area.on.tel {
+  width: 350px;
+  left: 7%;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item {
+  font-size: 11px;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item:not(.footer .group-link .direct-item .sub-area.on.tel .sub-item:last-child) {
+  padding: 20px 0;
+  border-bottom: 2px solid #ddd;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item:last-child {
+  padding-top: 20px;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item .cate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  padding: 10px 0px;
+  color: #666;
+  background: #eee;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item .cate:not(.footer .group-link .direct-item .sub-area.on.tel .sub-item .cate.customer) {
+  background: #0083cd;
+  color: #fff;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item .num-area {
+  flex-direction: column;
+  gap: 15px;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item .tel_num {
+  font-size: 13px;
+  word-break: break-all;
+  font-weight: bold;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item.new .tel_num {
+  display: flex;
+  gap: 10px;
+}
+.footer .group-link .direct-item .sub-area.on.tel .sub-item.new .tel_num span:nth-child(1) {
+  width: 50px;
+}
+.footer .group-link .direct-item .sub-area.on.service, .footer .group-link .direct-item .sub-area.on.language {
+  width: 200px;
+}
+.footer .group-link .direct-item .sub-area.on.service .triangle, .footer .group-link .direct-item .sub-area.on.language .triangle {
+  bottom: -3.5%;
+}
+.footer .group-link .direct-item .sub-area.on.service {
+  left: 8%;
+}
+.footer .group-link .direct-item .sub-area.on.language {
+  left: 13%;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item {
+  padding-top: 5px;
+  gap: 5px;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 16px;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.English {
+  padding-top: 15px;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.English::before {
+  background: url("../images/all_svc_flag_us(1).gif") no-repeat;
+  background-size: cover;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.Chinese::before {
+  background: url("../images/all_svc_flag_china(1).gif") no-repeat;
+  background-size: cover;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.Japanese::before {
+  background: url("../images/all_svc_flag_japan(1).gif") no-repeat;
+  background-size: cover;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.Filipino::before {
+  background: url("../images/all_svc_flag_philippines(1).gif") no-repeat;
+  background-size: cover;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.Vietnamese::before {
+  background: url("../images/all_svc_flag_vietnam(1).gif") no-repeat;
+  background-size: cover;
+}
+.footer .group-link .direct-item .sub-area.on.language .sub-item.Mongolian::before {
+  background: url("../images/all_svc_flag_mongolia(1).gif") no-repeat;
+  background-size: cover;
+}
+.footer .group-link .direct-item .sub-area.on.family {
+  padding: 20px;
+  width: 278px;
+  left: -18%;
+}
+.footer .group-link .direct-item .sub-area.on.family .sub-list {
+  padding: 0;
+}
+.footer .group-link .direct-item .sub-area.on.family .sub-item {
+  padding: 0;
+}
+.footer .group-link .direct-item .sub-area.on.family .sub-item-list {
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-row-gap: 13px;
+  height: 195px;
+  padding-top: 20px;
+}
+.footer .group-link .direct-item .sub-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.footer .group-link .direct-item .sub-item_title {
+  font-size: 16px;
+  border-bottom: 2px solid #666;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+.footer .group-link .direct-item .sub-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 13px;
+  padding-top: 15px;
+}
+.footer .group-link .direct-item.tel_title {
   font-weight: 600;
 }
 .footer .group-link .sns-list {

@@ -22,8 +22,8 @@
 
     .direct {
       &-list {
-        li:not(.site) {
-          a {
+        .direct-item:not(.site) {
+          .direct-item_title {
             border-right: 1px solid #ddd;
           }
         }
@@ -32,9 +32,9 @@
       &-item {
         position: relative;
 
-        a {
+        &_title {
           font-size: 12px;
-          padding: 0 40px;
+          padding: 0 50px;
 
           &::after {
             content: "";
@@ -44,10 +44,213 @@
             height: 11px;
             padding: 0 5px;
           }
+
+        }
+
+
+        .sub {
+          &-area {
+            display: none;
+
+            &.on {
+              display: block;
+              position: absolute;
+              bottom: 130%;
+              background: #fff;
+              border: 1px solid;
+
+              .triangle {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) rotate(180deg);
+                bottom: -2.5%;
+              }
+
+              &.tel {
+                width: 350px;
+                left: 7%;
+
+                .sub {
+                  &-item {
+                    font-size: 11px;
+
+                    &:not(&:last-child) {
+                      padding: 20px 0;
+                      border-bottom: 2px solid #ddd;
+                    }
+
+                    &:last-child {
+                      padding-top: 20px;
+                    }
+
+                    .cate {
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      width: 70px;
+                      padding: 10px 0px;
+                      color: #666;
+                      background: #eee;
+
+                      &:not(&.customer) {
+                        background: #0083cd;
+                        color: #fff;
+                      }
+                    }
+
+                    .num-area {
+                      flex-direction: column;
+                      gap: 15px;
+                    }
+
+                    .tel_num {
+                      font-size: 13px;
+                      word-break: break-all;
+                      font-weight: bold;
+                    }
+
+                    &.new {
+                      .tel_num {
+                        display: flex;
+                        gap: 10px;
+
+                        span:nth-child(1) {
+                          width: 50px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.service,
+              &.language {
+                width: 200px;
+
+                .triangle {
+                  bottom: -3.5%;
+                }
+              }
+
+              &.service {
+                left: 8%;
+              }
+
+              &.language {
+                left: 13%;
+
+                .sub {
+                  &-item {
+                    padding-top: 5px;
+                    gap: 5px;
+
+                    &::before {
+                      content: "";
+                      display: block;
+                      width: 20px;
+                      height: 16px;
+                    }
+
+                    &.English {
+                      padding-top: 15px;
+
+                      &::before {
+                        background: url("../images/all_svc_flag_us(1).gif") no-repeat;
+                        background-size: cover;
+                      }
+                    }
+
+                    &.Chinese {
+                      &::before {
+                        background: url("../images/all_svc_flag_china(1).gif") no-repeat;
+                        background-size: cover;
+                      }
+                    }
+
+                    &.Japanese {
+                      &::before {
+                        background: url("../images/all_svc_flag_japan(1).gif") no-repeat;
+                        background-size: cover;
+                      }
+                    }
+
+                    &.Filipino {
+                      &::before {
+                        background: url("../images/all_svc_flag_philippines(1).gif") no-repeat;
+                        background-size: cover;
+                      }
+                    }
+
+                    &.Vietnamese {
+                      &::before {
+                        background: url("../images/all_svc_flag_vietnam(1).gif") no-repeat;
+                        background-size: cover;
+                      }
+                    }
+
+                    &.Mongolian {
+                      &::before {
+                        background: url("../images/all_svc_flag_mongolia(1).gif") no-repeat;
+                        background-size: cover;
+                      }
+                    }
+                  }
+                }
+              }
+
+              &.family {
+                padding: 20px;
+                width: 278px;
+                left: -18%;
+
+                .sub {
+                  &-list {
+                    padding: 0;
+                  }
+
+                  &-item {
+                    padding: 0;
+                  }
+
+                  &-item-list {
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    grid-row-gap: 13px;
+                    height: 195px;
+                    padding-top: 20px;
+                  }
+                }
+              }
+            }
+          }
+
+          &-list {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+          }
+
+          &-item_title {
+            font-size: 16px;
+            border-bottom: 2px solid #666;
+            padding-bottom: 5px;
+            display: flex;
+            align-items: center;
+          }
+
+          &-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            font-size: 13px;
+            padding-top: 15px;
+          }
         }
 
         &.tel {
-          font-weight: 600;
+          &_title {
+            font-weight: 600;
+          }
         }
       }
     }
