@@ -19,6 +19,7 @@ $(function () {
     el: ".pagination",
     clickable: true
   },
+  
 })
 
 
@@ -36,6 +37,14 @@ $(".btn-autoplay").click(function(){
   }
 })
 
+
+/**
+ * @스와이퍼인덱스클릭시자동재생버튼이미지교체기능
+ * 
+ */
+$(".section-visual .control-area .swiper-pagination-bullet").click(e => {
+    $(".btn-autoplay").addClass("on")
+})
 
 /**
  * @autharea영역의sublist나타내는기능
