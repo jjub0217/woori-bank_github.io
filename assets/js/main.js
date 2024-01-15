@@ -27,14 +27,18 @@ $(function () {
  * @스와이퍼자동재생멈춤기능
  * 
  */
-$(".btn-autoplay").click(function(){
-  if($(this).hasClass("on")){
-    $(this).removeClass("on")
+const btnAutoPlay = (target) => {
+  console.log("btnAutoPlay 실행");
+  if(target.hasClass("on")){
+    target.removeClass("on")
     mainVisual.autoplay.start();
   }else{
-    $(this).addClass("on")
+    target.addClass("on")
     mainVisual.autoplay.stop();
   }
+}
+$(".btn-autoplay").click(() =>{
+  btnAutoPlay($(this))
 })
 
 
@@ -42,8 +46,8 @@ $(".btn-autoplay").click(function(){
  * @스와이퍼인덱스클릭시자동재생버튼이미지교체기능
  * 
  */
-$(".section-visual .control-area .swiper-pagination-bullet").click(e => {
-    $(".btn-autoplay").addClass("on")
+$(".section-visual .control-area .swiper-pagination-bullet").click(() => {
+  $(".btn-autoplay").addClass("on")
 })
 
 /**
@@ -89,9 +93,7 @@ $(".util-list .util-item").hover(function(){
  */
 $(".group-link .direct-item").hover(function(){
   $(this).find(".sub-area").addClass("on")
-},function(){
-  $(this).find(".sub-area").removeClass("on")
-})
-
-
+  },function(){
+    $(this).find(".sub-area").removeClass("on")
+  })
 })
