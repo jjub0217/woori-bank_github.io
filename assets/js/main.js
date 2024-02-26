@@ -78,11 +78,11 @@ $(".gnb .nav-item").hover(function(){
  * @util리스트의item에마우스호버했을시sublist나타내는기능
  * 
  */
-$(".util-list .util-item").hover(function(){
-  $(this).find(".sub-list").addClass("on")
+$(".util-item").hover(function(){
+  $(this).find(".item-area").addClass("on")
   $(this).find(".triangle").addClass("on")
 }, function () {
-  $(this).find('.sub-list').removeClass('on');
+  $(this).find('.item-area').removeClass('on');
   $(this).find(".triangle").removeClass("on")
 })
 
@@ -92,8 +92,10 @@ $(".util-list .util-item").hover(function(){
  * 
  */
 $(".group-link .direct-item").hover(function(){
-  $(this).find(".sub-area").addClass("on")
+  $(this).find(".item-area").addClass("on")
+  $(this).find(".triangle").addClass("on")
   },function(){
-    $(this).find(".sub-area").removeClass("on")
+    $(this).find(".item-area").removeClass("on") 
+    $(this).find(".triangle").removeClass("on")
   })
 })
