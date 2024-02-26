@@ -16,9 +16,9 @@
 
 
 ## 프로젝트 웹접근성
-- Open-WAX 결과 : error 0
+- Open-WAX 결과 : error 0<br>
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/290640d3-fc75-43e1-bfe6-f216201bec6e" width=500> <br>
-- WAVE 결과: error 0
+- WAVE 결과: error 0<br>
 <img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/464feea0-fb6d-44d8-946b-a1993759e752" width=500>
 
 
