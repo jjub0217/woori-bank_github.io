@@ -17,16 +17,15 @@
 
 ## 프로젝트 웹접근성
 - Open-WAX 결과 : error 0
-<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/c7c36c3d-c582-4ad2-8fac-3b0d3719a70a" width=500> <br>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/290640d3-fc75-43e1-bfe6-f216201bec6e" width=500> <br>
 - WAVE 결과: error 0
-<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/15374fca-e48b-44af-99a1-a28ccb26014b" width=500>
+<img src="https://github.com/jjub0217/beautiful.github.io/assets/62126380/464feea0-fb6d-44d8-946b-a1993759e752" width=500>
 
 
 ## 기술 스택
 ![HTML5](https://img.shields.io/badge/HTML5-FE642E?style=flat-square&logo=HTML5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-2E9AFE?style=flat-square&logo=CSS3&logoColor=white)
 ![SASS](https://img.shields.io/badge/Sass-cc6699?style=flat-square&logo=sass&logoColor=white)
-![Javascript](https://img.shields.io/badge/Javascript-gray?style=flat-square&logo=Javascript&logoColor=f7df1e)
 ![jQuery](https://img.shields.io/badge/jQuery-0769ad?style=flat-square&logo=jQuery&logoColor=white)
 ![Swiper](https://img.shields.io/badge/Swiper-gray?style=flat-square&logo=Swiper&logoColor=0080FF)
 
